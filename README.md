@@ -8,6 +8,18 @@ altering any past record breaks the chain. A bare chain cannot protect its own *
 record, so the file is periodically timestamped with [OpenTimestamps](https://opentimestamps.org),
 which anchors a hash of it into the Bitcoin blockchain. Those proofs are in `anchors/`.
 
+## Where this lives
+
+This repository is published in two places. Either is sufficient on its own to
+verify the ledger — the proof is in the receipts and in Bitcoin, not in the host:
+
+- https://codeberg.org/SimplexDNA/franklin-ledger
+- https://github.com/TeamSimplex/franklin-ledger
+
+They are kept identical. If the two ever differ, trust neither and check both
+against the OpenTimestamps receipts, which are what actually commit the file's
+hash to the blockchain.
+
 ## Verify it yourself
 
 Install the client once:
